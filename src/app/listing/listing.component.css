@@ -1,0 +1,109 @@
+
+
+
+
+div.container-fluid
+{
+  width: 100%
+}
+
+
+input.form-control
+{
+  width:50%;
+}
+.filter-checkbox
+{
+  margin-left: 10%;
+}
+.wrapper {
+  position: relative;
+
+}
+
+.wrapper input {
+  width: 100px;
+  padding-left: 15px;
+}
+
+.wrapper p {
+  position: absolute;
+  left: 2px;
+  top:2px;
+  width: 20px;
+}
+.wrapper + span
+{
+  margin-left: 2px;
+  margin-right: 2px
+}
+.wrapper + button
+{
+  margin-left: 5px;
+}
+#prf
+{
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 150px;
+}
+#prf a
+{
+  display:block;
+  float:right;
+  width:10px;
+  height:20px;
+  cursor: pointer;
+}
+div.card
+{
+  cursor: pointer;
+  width: 18rem;
+  display: inline-block;
+  margin-left: 2%;
+  margin-top: 1%;
+  height: 25rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+
+}
+.card-text
+{
+  display: block;
+}
+div.card h5
+{
+
+  width: 100%;
+
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div.card button
+{
+  margin-left: 25%;
+
+}
+.circle-icon {
+  background: green;
+  padding: 5px;
+  border-radius: 50%;
+  color: black;
+  margin-right: 5px;
+}
+.returnMessage
+{
+  display: block;
+  position: fixed;
+  bottom: 10%;
+  left:45%;
+  z-index:1;
+  padding: 10px;
+  background-color: black;
+  color: #FFFFFF
+}
+
+
+

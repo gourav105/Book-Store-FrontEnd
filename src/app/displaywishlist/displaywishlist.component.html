@@ -1,0 +1,48 @@
+
+<ng-progress #bar [direction]="'ltr+'" [min]="20" [max]="1" [speed]="200"  [trickleSpeed]="300"
+             [spinner]="true" [spinnerPosition]="'right'" [thick]="false" [meteor]="true"
+             [color]="'purple'" [ease]="'linear'"></ng-progress>
+
+<div class="container center"  *ngIf="!flag">
+  <img src="../../assets/clipboard-list-solid.svg" />
+  <h3 >Your Wishlist Is Empty</h3>
+  <h3 >Add Books In Your Wishlist</h3>
+</div>
+
+
+
+
+<div class="container" *ngIf="flag">
+  <div class="row">
+
+    <div class="col-6">
+      <div *ngFor="let singleWish of wishListArray" class="row">
+
+        <img class="img-thumbnail" src="{{singleWish.listing.imageLink}}" >
+
+
+
+        <div class="item-body">
+          <span class="first"><i class="fas fa-book"></i> {{singleWish.listing.bookName}}</span>
+          <span ><i class="fas fa-pen-alt"></i> {{singleWish.listing.authorName}}</span>
+          <span ><i class="fas fa-band-aid"></i> {{singleWish.listing.condition}}</span>
+          <p>Added On {{singleWish.createdAt}}</p>
+        </div>
+        <div class="item-side">
+          <span (click)="onRemove(singleWish.id)" ><i class="fas fa-times"></i></span>
+
+          <h5 >{{singleWish.listing.price|currency:'INR':true:'.0-2'}}</h5>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-4" *ngIf="flag">
+      <div >
+      <p >Items in Wishlist           {{wishListArray.length}}</p>
+        <p >Price of Wishlist           {{price|currency:'INR':true:'.0-2'}}</p>
+      </div>
+
+    </div>
+  </div>
+</div>

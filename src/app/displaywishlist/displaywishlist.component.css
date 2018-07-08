@@ -1,0 +1,94 @@
+.center
+{
+  text-align: center
+}
+.center img
+{
+  width: 15%;
+  height: 15%;
+  margin-top:12%;
+  margin-bottom: 5%
+}
+.center h3
+{
+  color: lightgray;
+}
+.container div.col-6
+{
+  margin-left: 10%;
+  margin-top: 3%
+}
+.col-6 div.row
+{
+  border: 1px solid #E8E8E8;
+  margin-bottom: 2%
+}
+.col-6 img
+{
+  width: 40%;
+  height: 170px
+}
+div.item-body
+{
+  width:40%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+}
+div.item-body span
+{
+  margin-top:5px
+}
+div.item-body span.first
+{
+  margin-top: 15%;
+}
+div.item-body p
+{
+  font-size: 0.7em;
+  position: absolute;
+  right: 4px;
+  margin-top: 9rem
+}
+div.item-side
+{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 2px
+}
+div.item-side span
+{
+  cursor: pointer;
+  width: 10px;
+  position: absolute;
+  right: 5px
+}
+div.item-side h5
+{
+  text-align: right;
+  margin-right: 20%;
+  margin-top: 50%
+}
+div.col-4 div
+{
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin-top: 10%;
+  margin-left: 2%;
+  height: 15rem;
+  padding-top: 20%;
+}
+div.col-4 p
+{
+  text-align: left;
+  margin-left: 5%;
+  font-weight: bold;
+
+}
+
+
+
+
+
+
+

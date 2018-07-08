@@ -1,0 +1,42 @@
+<ng-progress [direction]="'ltr+'" [min]="20" [max]="1" [speed]="200"  [trickleSpeed]="300"
+             [spinner]="true" [spinnerPosition]="'right'" [thick]="false" [meteor]="true"
+             [color]="'purple'" [ease]="'linear'"></ng-progress>
+
+<div class="signup-page">
+  <div class="form">
+    <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+      <input type="email" placeholder="Enter email" id="em"[(ngModel)]="email" name="email" required (blur)="onEmailBlur()" />
+      <p *ngIf=flag1>* Email Already Registered</p>
+      <p *ngIf=flag2>* Please Enter Valid Email</p>
+
+        <div class="row">
+        <div class="col">
+          <input type="text"   placeholder="First Name" [(ngModel)]="firstname" name="firstname" required>
+        </div>
+        <div class="col">
+          <input type="text"   placeholder="Last Name" [(ngModel)]="lastname" name="lastname" required>
+        </div>
+      </div>
+      <input type="text" placeholder="College" [(ngModel)]="college" name="college" required/>
+      <input type="text" placeholder="Address" [(ngModel)]="address" name="address" required/>
+      <div class="row">
+        <div class="col">
+          <input type="text" placeholder="City" [(ngModel)]="city" name="city" required/>
+        </div>
+        <div class="col">
+          <input type="text" placeholder="State" [(ngModel)]="state" name="state" required/>
+        </div>
+      </div>
+      <input type="text" placeholder="Mobile No" [(ngModel)]="phno" name="contact-no" required (blur)="onMobileBlur()" />
+      <p *ngIf=flag3>* Please Enter Valid Mobile No.</p>
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required (blur)="onPasswordBlur()"/>
+      <p *ngIf=flag4>* Password must contains one lower case, one upper case, one digit, 6-13 length, and no special characters.</p>
+      <button type="submit" [disabled]="!signupForm.form.valid||flag2||flag3||flag4" class="btn">CREATE</button>
+
+    </form>
+  </div>
+</div>
+
+
+
+

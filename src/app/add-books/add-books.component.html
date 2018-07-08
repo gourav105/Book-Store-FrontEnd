@@ -1,0 +1,43 @@
+
+<ng-progress #bar [direction]="'ltr+'" [min]="20" [max]="1" [speed]="200"  [trickleSpeed]="300"
+             [spinner]="true" [spinnerPosition]="'right'" [thick]="false" [meteor]="true"
+             [color]="'purple'" [ease]="'linear'"></ng-progress>
+
+<div id="outerDiv">
+  <h3>Sell Your Book</h3>
+  <form (ngSubmit)="onSubmit()" #addForm="ngForm">
+    <div class="form-group">
+      <label for="bookname">Book Name</label>
+      <input type="text" class="form-control" id="bookname" placeholder="Book Name" [(ngModel)]="bookname" name="bookname" required>
+    </div>
+    <div class="form-group">
+      <label for="authorname">Author Name</label>
+      <input type="text" class="form-control" id="authorname" placeholder="Author Name" [(ngModel)]="authorname" name="authorname" required>
+    </div>
+    <label>Book Image</label>
+    <div class="input-group">
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="image" required (change)="selectFile($event)" name="image" required>
+      <label class="custom-file-label" for="image">{{photoLocalpath}}</label>
+    </div>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" [disabled]="photoLocalpath==='Select Photo'" (click)="upload()">Upload</button>
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="text" class="form-control" id="price" placeholder="Price" [(ngModel)]="price" name="price" required>
+    </div>
+    <div class="form-group">
+      <label class="my-1 mr-2" for="condition">Book Condition</label>
+      <select class="custom-select my-1 mr-sm-2" id="condition" [(ngModel)]="condition" name="condition">
+        <option value="Choose">Choose...</option>
+        <option *ngFor="let c of conditions" [value]="c">{{c}}</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="!addForm.form.valid||condition==='Choose'||imageLink===''" class="btn btn-primary">Add Book</button>
+
+  </form>
+
+</div>
+

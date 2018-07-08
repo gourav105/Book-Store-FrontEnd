@@ -1,0 +1,54 @@
+div.center
+{
+  text-align: center;
+}
+div.container h4
+{
+  text-align: center;
+  margin-top: 3%;
+}
+div.center img
+{
+  width: 15%;
+  height: 15%;
+  margin-top: 7%;
+  margin-bottom: 5%;
+}
+div.center h3
+{
+  color: lightgray;
+}
+.card
+{
+  width: 22rem;
+  display: inline-block;
+  margin-left: 1%;
+  margin-bottom: 2%;
+  width: 22rem;
+  display: inline-block;
+  margin-left: 1%;
+  margin-bottom: 2%
+}
+.card-head
+{
+  display: flex;
+  flex-direction: row
+}
+.card-head img
+{
+  height:13rem;
+  padding: 5px;
+  margin-left:10px;
+  width:20rem
+}
+.card-head span
+{
+  cursor:pointer;
+}
+span.card-text
+{
+  display: block;
+}
+
+
+

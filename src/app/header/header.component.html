@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <span class="navbar-brand" >Book Store</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" [class.active]="selectedTab===0" >
+        <a class="nav-link"  (click)="selectListings()"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" [class.active]="selectedTab===1">
+        <a class="nav-link" (click)="selectAddBooks()"><i class="fas fa-book"></i> Add Books</a>
+      </li>
+      <li class="nav-item" [class.active]="selectedTab===2">
+        <a class="nav-link" (click)="selectWishlist()"> <i class="fas fa-heart"></i> View Wishlist</a>
+      </li>
+
+      <li class="nav-item" [class.active]="selectedTab===3">
+        <a class="nav-link" (click)="selectMessages()"><i class="far fa-envelope"></i> Messages</a>
+      </li>
+
+      <li class="nav-item" [class.active]="selectedTab===4">
+        <a class="nav-link" (click)="selectMyAdds()"><i class="fab fa-adversal"></i> My Ads</a>
+      </li>
+
+    </ul>
+  </div>
+  <h6 *ngIf="username!==null"><i class="fas fa-user-circle"></i> {{username}}</h6>
+  <span  *ngIf="username!==null" (click)="logout()">Log Out <i class="fas fa-sign-out-alt"></i></span>
+</nav>

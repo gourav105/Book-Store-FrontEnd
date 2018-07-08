@@ -1,0 +1,16 @@
+<ng-progress #bar [direction]="'ltr+'" [min]="20" [max]="1" [speed]="200"  [trickleSpeed]="300"
+             [spinner]="true" [spinnerPosition]="'right'" [thick]="false" [meteor]="true"
+             [color]="'purple'" [ease]="'linear'"></ng-progress>
+
+<div class="login-page">
+  <div class="form">
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <input type="email" placeholder="email"[(ngModel)]="email" name="email" required/>
+      <input type="password" placeholder="password" [(ngModel)]="password" name="password" required/>
+      <div *ngIf=flag>*Invalid Email or Password</div>
+      <button class="btn" type="submit" [disabled]="!loginForm.form.valid">LOG IN</button>
+      <p class="message">Not registered? <a routerLink="/signup">Create an account</a></p>
+    </form>
+  </div>
+</div>
+

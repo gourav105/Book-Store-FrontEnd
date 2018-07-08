@@ -1,0 +1,29 @@
+.navbar
+{
+
+  background: #E5E5FF;
+}
+.navbar-brand
+{
+
+  font-size: x-large;
+  font-weight: bold;
+}
+.nav-item
+{
+  cursor: pointer;
+  color: white;
+}
+
+h6,span
+{
+  margin-right: 6%
+}
+span
+{
+  cursor: pointer;
+}
+span.navbar-brand
+{
+  cursor: auto;
+}

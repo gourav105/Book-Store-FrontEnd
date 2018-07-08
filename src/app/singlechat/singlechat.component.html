@@ -1,0 +1,58 @@
+
+<ng-progress #bar [direction]="'ltr+'" [min]="20" [max]="1" [speed]="200"  [trickleSpeed]="300"
+             [spinner]="true" [spinnerPosition]="'right'" [thick]="false" [meteor]="true"
+             [color]="'purple'" [ease]="'linear'"></ng-progress>
+
+<div class="container"  *ngIf="flag">
+
+  <div class="row"  *ngFor="let i of messagesArray">
+    <div class="col-10" [class.offset-2]="i.from===service.getLoggedInEmail()">
+
+        <span class="person-name" >{{i.from===service.getLoggedInEmail()?'You':otherPersonName}}</span>
+        <span class="timestamp">{{i.createdAt}}</span>
+
+      <p [style.background]="i.from===service.getLoggedInEmail()?'#ffe6cc':'#eef3f6'">{{i.message}}</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-10 offset-2">
+      <textarea [(ngModel)]="msg" class="form-control"  placeholder="Enter Your Message Here"></textarea>
+      <button class="btn btn-primary" [disabled]="msg===''" (click)="onSend(msg.value)">Send Message</button>
+      <button class="btn btn-primary" (click)="onNewMessage()">Check for new messages</button>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+export class User
+{
+ email:string;
+ firstname:string;
+ lastname:string;
+ college:string;
+ address:string;
+ city:string;
+ state:string;
+ phno:string;
+ password:string;
+ constructor(email,firstname,lastname,college,address,city,state,phno,password)
+ {
+   this.email=email;
+   this.firstname=firstname;
+   this.lastname=lastname;
+   this.college=college;
+   this.address=address;
+   this.city=city;
+   this.state=state;
+   this.phno=phno;
+   this.password=password;
+ }
+}

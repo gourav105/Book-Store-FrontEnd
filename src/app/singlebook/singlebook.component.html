@@ -1,0 +1,55 @@
+<ng-progress #bar [direction]="'ltr+'" [min]="20" [max]="1" [speed]="200"  [trickleSpeed]="300"
+             [spinner]="true" [spinnerPosition]="'right'" [thick]="false" [meteor]="true"
+             [color]="'purple'" [ease]="'linear'"></ng-progress>
+
+<div class="container">
+  <div class="row top-row">
+
+    <div class="col-7 offset-1">
+      <h5 >{{singlebook.bookName}}</h5>
+      <span>{{date}}</span>
+    </div>
+    <div class="col-3">
+      <h3 >{{singlebook.price|currency:'INR':true:'.0-2'}}</h3>
+    </div>
+    </div>
+  <div class="row middle-row">
+
+    <div class="col-6 offset-1">
+      <img class="img-fluid"  src={{singlebook.imageLink}}>
+    </div>
+    <div class="col-4">
+      <div class="detail-section">
+        <h6 >Seller Details</h6>
+        <i class="fas fa-user"></i>
+        <p  >{{name}}</p><br>
+        <i class="fas fa-graduation-cap" style="margin-top: 5%"></i>
+        <p  >{{college}}</p><br>
+        <i class="fas fa-globe-asia" style="margin-top: 5%"></i>
+        <p  >{{address}}</p><br>
+
+      </div>
+      <div class="chat-section">
+      <h6 >Chat With Seller</h6>
+      <textarea class="form-control" placeholder="Enter Message Here" [(ngModel)]=msg></textarea><br>
+      <button class="btn btn-primary" (click)="onSendMessage(singlebook.bookid,singlebook.userEmail)" [disabled]="msg.trim()===''">Send Message</button>
+      </div>
+    </div>
+  </div>
+  <div class="row lower-row">
+    <div class="col-6 offset-1" style="display: inline">
+      <h6>By Author: {{singlebook.authorName}}</h6>
+      <h6>In {{singlebook.condition}} Condition</h6>
+      <button class="btn btn-primary" style="display: inline" (click)="onAdding(singlebook.bookid)" >Add To Wishlist</button>
+    </div>
+     </div>
+  <span class="returnMessage" [style.display]="flag?'block':'none'"><i  class="fas fa-check circle-icon" ></i>{{returnmsg}}!!! Check In Wishlist</span>
+    </div>
+
+
+
+
+
+
+
+

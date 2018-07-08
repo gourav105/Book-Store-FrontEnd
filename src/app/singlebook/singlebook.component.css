@@ -1,0 +1,104 @@
+div.top-row
+{
+  margin-top: 2%;
+}
+.top-row .col-7
+{
+  border: 1px solid #E8E8E8;
+  border-radius: 15px;
+  height: 70px
+}
+.col-7 h5
+{
+  text-align: center;
+}
+.top-row .col-3
+{
+  background-color: #f8e9a1;
+  border-radius: 15px;
+  height: 70px
+}
+.middle-row
+{
+  margin-top: 1%;
+}
+
+div.col-3 h3
+{
+  text-align: center;
+  margin-top: 5%
+}
+img
+{
+  height: 350px;
+  width: 100%;
+  border-radius:2px;
+}
+
+div.col-4 div
+{
+  background: #dde8ee;
+  margin-bottom: 1%;
+  height: 50%;
+  width: 100%;
+  padding: 3%;
+  border-radius: 5px;
+}
+div.detail-section h6
+{
+  text-align: center;
+  margin-top: 3%
+}
+div.detail-section p
+{
+  display: inline;
+  margin-left: 3%;
+}
+div.chat-section h6
+{
+  text-align: center;
+}
+div.chat-section button
+{
+  margin-bottom: 10%;
+}
+.circle-icon {
+  background: green;
+  padding: 5px;
+  border-radius: 50%;
+  color: black;
+  margin-right: 5px;
+}
+
+.returnMessage
+{
+  display: block;
+  position: fixed;
+  bottom: 10%;
+  left:45%;
+  z-index:1;
+  padding: 10px;
+  background-color: black;
+  color: #FFFFFF
+}
+
+
+
+
+
+
+
+html { font-size: 1rem; }
+
+@media (min-width: 576px) {
+  html { font-size: 1.25rem; }
+}
+@media (min-width: 768px) {
+  html { font-size: 1.5rem; }
+}
+@media (min-width: 992px) {
+  html { font-size: 1.75rem; }
+}
+@media (min-width: 1200px) {
+  html { font-size: 2rem; }
+}

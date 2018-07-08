@@ -1,0 +1,87 @@
+
+<ng-progress #bar [direction]="'ltr+'" [min]="20" [max]="1" [speed]="200"  [trickleSpeed]="300"
+             [spinner]="true" [spinnerPosition]="'right'" [thick]="false" [meteor]="true"
+             [color]="'purple'" [ease]="'linear'"></ng-progress>
+
+<div class="container-fluid">
+    <div class="form-inline">
+    <div class="col-2"></div>
+    <input class="form-control" type="search" placeholder="Search By Book Name, Author Name" [(ngModel)]="searchkeyword" (keyup)="onKey($event)"  >
+     <button class="btn btn-outline-primary"  (click)="onSearch()" ><i class="fas fa-search"></i></button>
+    </div>
+
+  <div class="row">
+    <div class="col-3" >
+      <h5>Filters</h5>
+      <p>Book Condition</p>
+      <div class="filter-checkbox">
+      <input class="form-check-input" type="checkbox" [checked]="newtoggle" (change)="onNewFilter()" id="newtoggle">
+      <label class="form-check-label" for="newtoggle">
+        New
+      </label>
+      </div>
+
+      <div class="filter-checkbox">
+        <input class="form-check-input" type="checkbox" [checked]="almostnewtoggle" (change)="onAlmostNewFilter()" id="almostnewtoggle">
+        <label class="form-check-label" for="almostnewtoggle">
+          Almost New
+        </label>
+      </div>
+
+      <div class="filter-checkbox">
+        <input class="form-check-input" type="checkbox" [checked]="slightlydamagetoggle" (change)="onSlightlyDamageFilter()" id="slightlydamagetoggle">
+        <label class="form-check-label" for="slightlydamagetoggle">
+          Slightly Damage
+        </label>
+      </div>
+
+      <div class="filter-checkbox">
+        <input class="form-check-input" type="checkbox"  [checked]="worntoggle" (change)="onWornFilter()" id="worntoggle">
+        <label class="form-check-label" for="worntoggle">
+          Worn
+        </label>
+      </div>
+      <br>
+      <p>Price</p>
+
+    <div class="form-inline">
+      <div class="wrapper">
+        <input type="text" class="form-control"  placeholder="MIN" [(ngModel)]="minprice"/>
+        <p>&#x20b9;</p>
+      </div>
+      <span>-</span>
+      <div class="wrapper">
+        <input type="text" class="form-control"  placeholder="MAX" [(ngModel)]="maxprice"/>
+        <p>&#x20b9;</p>
+      </div>
+      <button class="btn btn-primary" (click)="onRangeSelected()" >Go</button>
+    </div>
+      <div *ngIf="pricefiltertoggle" id="prf">{{minprice|currency:'INR':true:'.0-2'}} - {{maxprice|currency:'INR':true:'.0-2'}}
+        <a (click)="onRemoveFilter()"><i class="far fa-window-close"></i></a>
+      </div>
+      <span class="returnMessage" [style.display]="flag?'block':'none'"><i  class="fas fa-check circle-icon" ></i>{{msg}}!!! Check In Wishlist</span>
+    </div>
+
+
+
+    <div class="col-9">
+
+      <div class="card"  *ngFor="let singlebook of listingArray" >
+        <img class="card-img-top" src="{{singlebook.imageLink}}" (click)="onSingleBook(singlebook.bookid)" alt="Card image cap" style="height:13rem">
+        <div class="card-body" (click)="onSingleBook(singlebook.bookid)">
+          <h5 class="card-title">{{singlebook.bookName}}</h5>
+          <span class="card-text">By {{singlebook.authorName}}</span>
+          <span class="card-text">{{singlebook.price|currency:'INR':true:'.0-2'}}</span>
+          <span class="card-text">In {{singlebook.condition}} Condition</span>
+        </div>
+        <button  class="btn btn-primary" (click)="onAdding(singlebook.bookid)">Add to Wishlist</button>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,48 @@
+div.center
+{
+  text-align: center
+}
+.center img
+{
+  width: 15%;
+  height: 15%;
+  margin-top: 7%;
+  margin-bottom: 5%;
+}
+.list-group button
+{
+  cursor: pointer;
+}
+.center h3
+{
+  color: lightgray;
+}
+div.list-group
+{
+  width: 80%;
+  margin-left: 10%
+}
+div.up-info p
+{
+  width: 50%;
+  display: inline-block
+}
+p.bottom-message
+{
+  display: inline-block;
+  margin-left:5%;
+  margin-top:2%;
+  font-weight: bold;
+  width:80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+p.bottom-date
+{
+  font-size: 0.8rem;
+  position: absolute;
+  right: 5px;
+  bottom: 1px
+}
+
